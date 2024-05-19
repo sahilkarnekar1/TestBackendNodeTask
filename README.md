@@ -24,27 +24,28 @@ This project provides a backend service for managing patient registrations and h
 
 ## How to Execute in Local Environment
 
-1. Clone the GitHub repository:
-   ```bash
+**Clone the GitHub repository:**
+   bash
    git clone https://github.com/sahilkarnekar1/TestBackendNodeTask.git
-Navigate to the root directory and install dependencies: 
+**Navigate to the root directory and install dependencies:** 
 cd TestBackendNodeTask
 npm install
 
-Create a .env file in the root directory.
+**Create a .env file in the root directory.**
 Configure MongoDB database URL and port in the .env file:
 MONGODB_URL=your_database_url_or_local_mongodb_environment_url (Compass or Atlas)
 PORT=5000
 
-Seed the database with initial data:
+**Seed the database with initial data:**
 node scripts/seed.js
 This script will add the hospitals and psychiatrists data to the database.
-Start the server:
+
+**Start the server:**
 node index.js
 
-Test APIs:
-Register Patient API: POST http://localhost:5000/api/patients/register
-Provide form data:
+**Test APIs:**
+**Register Patient API: POST** http://localhost:5000/api/patients/register
+**Provide form data:**
 name: your name
 address: aaaaa
 email: aaaa@aa.aaa
@@ -53,11 +54,18 @@ password: ghfhbg42
 photo: file type(Jpg/png/jpeg etc)
 psychiatristId: your psychiatrist ID from the database (provided in Postman collections)
 
-Notes
-The Postman collection includes four requests: two for the production server and two for localhost testing.
-To test the APIs locally, configure the project on your local machine and use the provided endpoints.
+**Register Patient API: POST** http://localhost:5000/api/hospitals/details
+**Provide raw json data in Body:** 
+for example : 
+{
+    "hospitalId": "66474dc7015909b52b06cebf"
+}
 
-Feel free to reach out if you have any questions or need further assistance. 
+**Notes**
+**1.** The Postman collection includes four requests: two for the production server and two for localhost testing.
+**2.** To test the APIs locally, configure the project on your local machine and use the provided endpoints.
+
+## Feel free to reach out if you have any questions or need further assistance. 
 Email : sahilkarnekar.sit.it@gmail.com
 
 
