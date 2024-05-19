@@ -39,7 +39,8 @@ This project provides a backend service for managing patient registrations and h
 
 3. **Create a `.env` file in the root directory and configure MongoDB database URL and port:**
    ```
-   MONGODB_URL=your_database_url_or_local_mongodb_environment_url (Compass or Atlas)
+   MONGODB_URL=mongodb+srv://<username>:<password>@cluster0.pyhi6xj.mongodb.net/?
+   your_database_url_or_local_mongodb_environment_url (Compass or Atlas)
    PORT=5000
    ```
 
