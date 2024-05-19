@@ -12,7 +12,7 @@ const registerPatient = async (req, res) => {
   }
   try {
     const { name, address, email, phone, password, psychiatristId } = req.body;
-    const photo = req.file.buffer;
+    const photo = req.file ? req.file.buffer : null;
 
     const psyIdvalid = Psychiatrist.find({ _id: psychiatristId });
     if (!mongoose.Types.ObjectId.isValid(psychiatristId)) {
