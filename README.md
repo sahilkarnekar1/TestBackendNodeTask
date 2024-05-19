@@ -3,6 +3,7 @@
 This project provides a backend service for managing patient registrations and hospital details, deployed on Vercel.
 
 ## Backend Deployed URL
+
 [https://test-backend-node-task.vercel.app/](https://test-backend-node-task.vercel.app/)
 
 ## List of API Endpoints
@@ -11,6 +12,7 @@ This project provides a backend service for managing patient registrations and h
 2. **Hospital Details**: [https://test-backend-node-task.vercel.app/api/hospitals/details](https://test-backend-node-task.vercel.app/api/hospitals/details)
 
 ## Postman Collection Access URL
+
 [Postman Collection](https://t13333.postman.co/workspace/T1~5c7fdae5-f642-48f1-9635-bbc135710593/collection/28291591-8f1276d3-0790-4eb3-b6db-1d9e068c413c?action=share&creator=28291591)
 
 ## Libraries/Frameworks Used
@@ -24,50 +26,64 @@ This project provides a backend service for managing patient registrations and h
 
 ## How to Execute in Local Environment
 
-**Clone the GitHub repository:**
-   bash
+1. **Clone the GitHub repository:**
+   ```bash
    git clone https://github.com/sahilkarnekar1/TestBackendNodeTask.git
-**Navigate to the root directory and install dependencies:** 
-cd TestBackendNodeTask
-npm install
+   ```
 
-**Create a .env file in the root directory.**
-Configure MongoDB database URL and port in the .env file:
-MONGODB_URL=your_database_url_or_local_mongodb_environment_url (Compass or Atlas)
-PORT=5000
+2. **Navigate to the root directory and install dependencies:**
+   ```bash
+   cd TestBackendNodeTask
+   npm install
+   ```
 
-**Seed the database with initial data:**
-node scripts/seed.js
-This script will add the hospitals and psychiatrists data to the database.
+3. **Create a `.env` file in the root directory and configure MongoDB database URL and port:**
+   ```
+   MONGODB_URL=your_database_url_or_local_mongodb_environment_url (Compass or Atlas)
+   PORT=5000
+   ```
 
-**Start the server:**
-node index.js
+4. **Seed the database with initial data:**
+   ```bash
+   node scripts/seed.js
+   ```
+   This script will add the hospitals and psychiatrists data to the database.
 
-**Test APIs:**
-**Register Patient API: POST** http://localhost:5000/api/patients/register
-**Provide form data:**
-name: your name
-address: aaaaa
-email: aaaa@aa.aaa
-phone: +3654635454163
-password: ghfhbg42
-photo: file type(Jpg/png/jpeg etc)
-psychiatristId: your psychiatrist ID from the database (provided in Postman collections)
+5. **Start the server:**
+   ```bash
+   node index.js
+   ```
 
-**Register Patient API: POST** http://localhost:5000/api/hospitals/details
-**Provide raw json data in Body:** 
-for example : 
-{
-    "hospitalId": "66474dc7015909b52b06cebf"
-}
+6. **Test APIs:**
+   - **Register Patient API: POST** `http://localhost:5000/api/patients/register`
+     - **Provide form data:**
+       - `name`: your name
+       - `address`: aaaaa
+       - `email`: aaaa@aa.aaa
+       - `phone`: +3654635454163
+       - `password`: ghfhbg42
+       - `photo`: file type (Jpg/png/jpeg etc)
+       - `psychiatristId`: your psychiatrist ID from the database (provided in Postman collections)
 
-**Notes**
-**1.** The Postman collection includes four requests: two for the production server and two for localhost testing.
-**2.** To test the APIs locally, configure the project on your local machine and use the provided endpoints.
+   - **Hospital Details API: POST** `http://localhost:5000/api/hospitals/details`
+     - **Provide raw JSON data in Body:**
+       ```json
+       {
+           "hospitalId": "66474dc7015909b52b06cebf"
+       }
+       ```
 
-## Feel free to reach out if you have any questions or need further assistance. 
-Email : sahilkarnekar.sit.it@gmail.com
+## Notes
 
+1. The Postman collection includes four requests: two for the production server and two for localhost testing.
+2. To test the APIs locally, configure the project on your local machine and use the provided endpoints.
+
+## Contact
+
+Feel free to reach out if you have any questions or need further assistance.
+
+**Email:** [sahilkarnekar.sit.it@gmail.com](mailto:sahilkarnekar.sit.it@gmail.com)
+
+---
 
 This README file should help users understand how to deploy, configure, and test your backend application. Ensure that the `.env` file contains accurate and secure database credentials, and keep your environment variables confidential.
-
